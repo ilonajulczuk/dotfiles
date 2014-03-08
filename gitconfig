@@ -1,0 +1,7 @@
+[user]
+	name = Justyna Ilczuk
+	email = att@atte.ro
+[core]
+	editor = vim
+[color]
+	ui = true
