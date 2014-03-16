@@ -5,12 +5,13 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set number
+set relativenumber
 filetype on            " enables filetype detection
 filetype plugin on     " enables filetype specific plugins
 
-colorscheme molokai
+colorscheme xoria256
 set pastetoggle=<f5>
-set number
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
 

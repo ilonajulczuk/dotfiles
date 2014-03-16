@@ -19,7 +19,7 @@ ZSH_THEME="gentoo"
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias zshreload=". ~/.zshrc"
-alias plan="okular ~/Studies/plan.pdf &"
+alias plan="okular ~/Studies/FT_sem\ 6_lato1314.pdf &"
 alias sesja="okular Studies/Plan\ sesji\ zimowej_1314.pdf &"
 alias -s png=feh
 alias -s jpg=feh
@@ -81,7 +81,7 @@ alias vcat='vimcat'
 export EDITOR='vim'
 export IPYTHONDIR='~/.ipython'
 export TERMINAL="konsole"
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3:/usr/games/bin:/home/att/.cabal/bin/:/home/att/anaconda/bin/
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3:/usr/games/bin:/home/att/.cabal/bin/:/home/att/anaconda/bin/:/home/att/arm-cs-tools/bin/
 
 fortune
 
