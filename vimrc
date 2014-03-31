@@ -22,7 +22,7 @@ noremap <F3> :Autoformat<CR><CR>
 nnoremap <F5> :GundoToggle<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_auto_trigger = 0
+let g:ycm_auto_trigger = 1
 
 " 1. split to tiled windows
 nmap <silent> <C-L>  <Plug>GoldenViewSplit
@@ -52,6 +52,15 @@ endfunction
    autocmd bufwritepost .vimrc source $MYVIMRC
    endif
 
-let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
+
+" Then set the default action of SuperTab to triggering <C-TAB>:
+
+let g:SuperTabDefaultCompletionType = '<C-Tab>'
 
