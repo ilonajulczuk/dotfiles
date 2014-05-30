@@ -14,7 +14,7 @@ man() {
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gentoo"
+ZSH_THEME="ys"
 
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
@@ -56,7 +56,7 @@ alias -s mkv=mpv
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(zsh-syntax-highlighting git)
 
 source $ZSH/oh-my-zsh.sh
 setopt interactivecomments
@@ -64,7 +64,7 @@ setopt interactivecomments
 # Customize to your needs...
 alias shcuts="xfconf-query -c xfce4-keyboard-shortcuts -l -v | cut -d'/' -f4 | awk '{printf "%30s", $2; print "\t" $1}' | sort | uniq | less"
 alias slb="echo mem | sudo tee /sys/power/state > /dev/null && slock"
-alias labfiz="cd ~/Studies/labfiz2"
+alias labfiz="cd ~/Projects/labfiz3"
 alias ret="cd ~/Projects/retrospective && . py3/bin/activate"
 alias hasatt="cd ~/Projects/hasatt"
 alias vags="bundle exec 'vagrant ssh'"
@@ -74,7 +74,9 @@ alias tag="cd ~/Projects/tag/"
 alias chaos="cd ~/Projects/chaos && . py3/bin/activate"
 alias hyper="cd ~/Projects/hypergraph && . py3/bin/activate && PYTHONPATH='$PYTHONPATH:/home/att/Projects/hypergraph/'"
 alias ch2="cd ~/Projects/chaos && . py2/bin/activate"
+alias goat="cd ~/Projects/egoat && . egoatenv2/bin/activate"
 alias blog="cd ~/Projects/blogging/tiny_struggles && . ~/Projects/blogging/bin/activate"
+alias pypet="cd ~/Projects/pypet/ && . penv/bin/activate && PYTHONPATH='$PYTHONPATH:/home/att/Projects/pypet/pypet/'"
 alias lt="~/LightTable/LightTable"
 alias ipno="ipython notebook"
 alias vcat='vimcat'
@@ -90,3 +92,5 @@ echo "If bored look here: http://www.rayninfo.co.uk/tips/zshtips.html"
 export TERM='xterm-256color'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export BROWSER="chromium"
+source /usr/bin/virtualenvwrapper.sh

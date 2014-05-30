@@ -5,3 +5,13 @@
 	editor = vim
 [color]
 	ui = true
+[help]
+    autocorrect = 1
+[alias]
+    ribbon = tag --force _ribbon origin/master
+    catchup = log --patch --reverse --topo-order _ribbon..origin/master
+    co = checkout
+    cm = commit
+    p = push
+    st = "status -sb"
+
