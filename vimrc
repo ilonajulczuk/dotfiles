@@ -67,7 +67,25 @@ endfunction
 
 
 " Source the vimrc file after saving it
- if has("autocmd")
+if has("autocmd")
    autocmd bufwritepost .vimrc source $MYVIMRC
-   endif
+endif
 
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+" Run this command automatically when a file is saved
+autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+
+au BufRead,BufNewFile *.tac set filetype=python
